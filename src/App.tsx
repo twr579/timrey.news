@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Box, CssBaseline, ThemeProvider, Typography } from '@mui/material';
+import theme from './theme';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box
+        display="flex"
+        flexDirection={'column'}
+        justifyContent="center"
+        alignItems="center"
+        minHeight="100vh"
+      >
+        <Typography color="primary.light" variant='h1'>TIM REYNOLDS</Typography>
+      </Box>
+    </ThemeProvider>
   );
 }
 
