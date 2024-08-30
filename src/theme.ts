@@ -1,7 +1,7 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import HeorotTtf from './fonts/heorot.ttf';
 
-const theme = createTheme({
+let theme = createTheme({
     palette: {
         background: {
             default: '#2C2E2F',
@@ -40,5 +40,9 @@ const theme = createTheme({
     },
 
 });
+theme.palette.text.primary = theme.palette.secondary.main;
+theme.typography.h1.color = theme.palette.primary.light;
+theme.typography.h1.textShadow = `5px 5px 1px ${theme.palette.primary.dark}`;
+theme = responsiveFontSizes(theme);
 
 export default theme;

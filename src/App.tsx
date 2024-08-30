@@ -1,20 +1,14 @@
 import './App.css';
-import { Box, CssBaseline, ThemeProvider, Typography } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
+import Headline from './components/Headline';
+
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box
-        display="flex"
-        flexDirection={'column'}
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-      >
-        <Typography color="primary.light" variant='h1'>TIM REYNOLDS</Typography>
-      </Box>
+      <Headline />
     </ThemeProvider>
   );
 }
