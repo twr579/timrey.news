@@ -1,5 +1,6 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import HeorotTtf from './fonts/heorot.ttf';
+import FuturaWoff from './fonts/futura.woff';
 
 let theme = createTheme({
     palette: {
@@ -20,9 +21,9 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Arial',
+        fontFamily: 'Futura, Arial, sans-serif',
         h1: {
-            fontFamily: 'Heorot',
+            fontFamily: 'Heorot, Times, serif',
         },
     },
     components: {
@@ -34,7 +35,11 @@ let theme = createTheme({
           font-display: swap;
           font-weight: 400;
           src: local('Heorot'), url(${HeorotTtf}) format('ttf');
-        }
+        };
+        @font-face {
+          font-family: 'Futura';
+          src: local('Futura'), url(${FuturaWoff}) format('woff');
+        };
       `,
         },
     },
@@ -42,7 +47,7 @@ let theme = createTheme({
 });
 theme.palette.text.primary = theme.palette.secondary.main;
 theme.typography.h1.color = theme.palette.primary.light;
-theme.typography.h1.textShadow = `5px 5px 1px ${theme.palette.primary.dark}`;
+theme.typography.h1.textShadow = `1px 1px 1px ${theme.palette.primary.dark}, -1px -1px 1px ${theme.palette.primary.light}`;
 theme = responsiveFontSizes(theme);
 
 export default theme;
