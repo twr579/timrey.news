@@ -2,6 +2,7 @@ import { Box, Grid2, Grow, Slide, Typography, useScrollTrigger } from '@mui/mate
 import { useEffect, useRef, useState } from 'react';
 import useWindowDimensions from '../helpers/getWindowDimensions';
 import ArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import BlinkingIcon from './BlinkingIcon';
 
 function Headline() {
     const { height } = useWindowDimensions();
@@ -44,10 +45,10 @@ function Headline() {
                         <Grow in={grow} timeout={2000}>
                             <Grid2 container spacing={3} direction={'column'} alignItems={'center'}>
                                 <Grid2>
-                                    <Typography variant='h5'>or: how I learned to stop worrying and love the web</Typography>
+                                    <Typography variant='h6'>or: how I learned to stop worrying and love the web</Typography>
                                 </Grid2>
                                 <Grid2>
-                                    <ArrowDownIcon className='arrow-down' />
+                                    <BlinkingIcon icon={<ArrowDownIcon />} />
                                 </Grid2>
                             </Grid2>
                         </Grow>
