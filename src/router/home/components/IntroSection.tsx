@@ -1,5 +1,5 @@
 import { Fade, Grid2, Typography, useScrollTrigger } from '@mui/material';
-import selfie from '../images/selfie.png';
+import selfie from '../../../images/selfie.png';
 import ArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import BlinkingIcon from './BlinkingIcon';
 

@@ -1,10 +1,8 @@
 import './App.css';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import theme from './theme';
-import Headline from './components/Headline';
 import { useEffect } from 'react';
-import IntroSection from './components/IntroSection';
-
+import Router from './router/Router';
 
 function App() {
   useEffect(() => {
@@ -14,8 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Headline />
-      <IntroSection />
+      <Router />
     </ThemeProvider>
   );
 }

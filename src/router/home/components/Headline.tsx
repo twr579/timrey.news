@@ -1,6 +1,6 @@
 import { Box, Grid2, Grow, Slide, Typography, useScrollTrigger } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
-import useWindowDimensions from '../helpers/getWindowDimensions';
+import useWindowDimensions from '../../../helpers/getWindowDimensions';
 import ArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import BlinkingIcon from './BlinkingIcon';
 
