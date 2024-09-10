@@ -1,4 +1,4 @@
-import { Box, Grid2, Grow, Slide, Typography, useScrollTrigger } from '@mui/material';
+import { Box, Fade, Grid2, Grow, Slide, Typography, useScrollTrigger } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import useWindowDimensions from '../../../helpers/getWindowDimensions';
 import ArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
@@ -31,6 +31,17 @@ function Headline() {
 
     return (
         <>
+            <Box
+                position={'fixed'}
+                left={'50%'}
+                sx={{ transform: 'translate(-50%)', backgroundColor: 'background.default', zIndex: 1 }}
+                width={'100%'}
+                display={{ xs: 'none', sm: 'block' }}
+            >
+                <Fade in={trigger}>
+                    <Typography variant='h2' textAlign={'center'}>TIMREY.NEWS</Typography>
+                </Fade>
+            </Box>
             <Box
                 ref={ref}
                 position={'fixed'}

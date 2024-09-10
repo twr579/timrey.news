@@ -6,6 +6,7 @@ let theme = createTheme({
     palette: {
         background: {
             default: '#2C2E2F',
+            paper: '#2C2E2F',
         },
         primary: {
             main: '#959A77',
@@ -25,6 +26,9 @@ let theme = createTheme({
         h1: {
             fontFamily: 'Heorot, Times, serif',
         },
+        h2: {
+            fontFamily: 'Heorot, Times, serif',
+        },
     },
     components: {
         MuiCssBaseline: {
@@ -42,12 +46,19 @@ let theme = createTheme({
         };
       `,
         },
+        MuiLink: {
+            defaultProps: {
+                underline: 'none',
+            },
+        },
     },
 
 });
 theme.palette.text.primary = theme.palette.secondary.main;
-theme.typography.h1.color = theme.palette.primary.light;
+theme.typography.h1.color = theme.palette.primary.main;
 theme.typography.h1.textShadow = `1px 1px 1px ${theme.palette.primary.dark}, -1px -1px 1px ${theme.palette.primary.light}`;
+theme.typography.h2.color = theme.palette.primary.main;
+theme.typography.h2.textShadow = `1px 1px 1px ${theme.palette.primary.dark}, -1px -1px 1px ${theme.palette.primary.light}`;
 theme = responsiveFontSizes(theme);
 
 export default theme;

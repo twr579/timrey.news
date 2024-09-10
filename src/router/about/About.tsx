@@ -1,7 +1,9 @@
-import selfie2 from '../../images/seflie2.png';
+import { Typography } from "@mui/material";
 
 function About() {
-    return (<div>About</div>)
+    return (
+        <Typography variant='h1'>About</Typography>
+    );
 }
 
 export default About;
