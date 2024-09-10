@@ -35,9 +35,6 @@ let theme = createTheme({
             styleOverrides: `
         @font-face {
           font-family: 'Heorot';
-          font-style: normal;
-          font-display: swap;
-          font-weight: 400;
           src: local('Heorot'), url(${HeorotTtf}) format('ttf');
         };
         @font-face {
