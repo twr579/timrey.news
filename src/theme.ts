@@ -1,5 +1,6 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import HeorotTtf from './fonts/heorot.ttf';
+import HeorotWoff from './fonts/heorot.woff';
 import FuturaWoff from './fonts/futura.woff';
 
 let theme = createTheme({
@@ -35,7 +36,7 @@ let theme = createTheme({
             styleOverrides: `
         @font-face {
           font-family: 'Heorot';
-          src: local('Heorot'), url(${HeorotTtf}) format('ttf');
+          src: url(${HeorotWoff}) format('woff'), url(${HeorotTtf}) format('ttf');
         };
         @font-face {
           font-family: 'Futura';
