@@ -56,12 +56,12 @@ function Menu() {
                     <Box sx={{
                         p: 2,
                     }}>
-                        <IconButton color='secondary' sx={{ mb: 2 }}>
-                            <CloseIcon onClick={() => toggleDrawer(false)} />
+                        <IconButton color='secondary' sx={{ mb: 2 }} onClick={() => toggleDrawer(false)}>
+                            <CloseIcon />
                         </IconButton>
                         <Divider sx={{ mb: 2 }} />
                         <Box sx={{ mb: 2 }}>
-                            {pages.map(page => <ListItemButton LinkComponent={Link} href={page.path}>
+                            {pages.map((page, index) => <ListItemButton LinkComponent={Link} href={page.path} key={index}>
                                 <ListItemIcon>
                                     {page.icon}
                                 </ListItemIcon>
