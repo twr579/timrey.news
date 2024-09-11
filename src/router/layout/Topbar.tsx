@@ -1,7 +1,14 @@
-import { Box, Container, Link, Typography } from "@mui/material";
+import { Box, Container, Fade, Link, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 function Topbar() {
+    const [fade, setFade] = useState(false);
+
+    useEffect(() => {
+        setFade(true);
+    }, []);
+
     return (
         <>
             <Box
@@ -16,9 +23,11 @@ function Topbar() {
                 </Link>
 
             </Box>
-            <Box sx={{ pt: 8 }}>
-                <Outlet />
-            </Box>
+            <Fade in={fade} timeout={2000}>
+                <Box sx={{ pt: 8 }}>
+                    <Outlet />
+                </Box>
+            </Fade>
         </>
     );
 }

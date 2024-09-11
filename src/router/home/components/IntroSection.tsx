@@ -1,4 +1,4 @@
-import { Fade, Grid2, Typography, useScrollTrigger } from '@mui/material';
+import { Fade, Grid2, Link, Typography, useScrollTrigger } from '@mui/material';
 import selfie from '../../../images/selfie.png';
 import ArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import BlinkingIcon from './BlinkingIcon';
@@ -13,7 +13,7 @@ function IntroSection() {
                     <Grid2 size={{ sm: 6 }} display={'flex'} flexDirection={'column'} justifyContent={'space-evenly'}>
                         <Typography variant='h5'><BlinkingIcon icon={<ArrowRightIcon />} /> Hey, I'm Tim Rey(nolds) and this is the go-to website for any and all news about me.</Typography>
                         <Typography variant='h5'><BlinkingIcon icon={<ArrowRightIcon />} /> I'm an electrical, computer, software, full stack, embedded, etc. engineer excited to break into the industry.</Typography>
-                        <Typography variant='h5'><BlinkingIcon icon={<ArrowRightIcon />} /> Want to get to know me? Start here</Typography>
+                        <Typography variant='h5'><BlinkingIcon icon={<ArrowRightIcon />} /> Want to get to know me? Start <Link href="/about" sx={{ fontFamily: "Heorot, Times, serif" }}>here</Link></Typography>
                     </Grid2>
                 </Fade>
                 <Grid2 size={{ sm: 6 }}>

@@ -7,6 +7,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import FolderIcon from '@mui/icons-material/Folder';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
+import selfieSticker from '../../images/selfie-sticker.png';
+import { GitHub, LinkedIn } from "@mui/icons-material";
 
 const pages = [
     {
@@ -29,6 +31,16 @@ const pages = [
         icon: <ContactPageIcon color="secondary" />,
         path: '/contact',
     },
+    {
+        title: 'LinkedIn',
+        icon: <LinkedIn color="secondary" />,
+        path: '//www.linkedin.com/in/timwreynolds/',
+    },
+    {
+        title: 'GitHub',
+        icon: <GitHub color="secondary" />,
+        path: '//github.com/twr579',
+    },
 ]
 
 function Menu() {
@@ -49,17 +61,18 @@ function Menu() {
                     <MenuIcon />
                 </IconButton>
                 <Drawer
-                    anchor='left'
+                    anchor='top'
                     open={open}
                     onClose={() => toggleDrawer(false)}
                 >
                     <Box sx={{
                         p: 2,
+                        height: "100vh",
+                        width: "100vw",
                     }}>
                         <IconButton color='secondary' sx={{ mb: 2 }} onClick={() => toggleDrawer(false)}>
                             <CloseIcon />
                         </IconButton>
-                        <Divider sx={{ mb: 2 }} />
                         <Box sx={{ mb: 2 }}>
                             {pages.map((page, index) => <ListItemButton LinkComponent={Link} href={page.path} key={index}>
                                 <ListItemIcon>
@@ -68,6 +81,9 @@ function Menu() {
                                 <Typography variant='h2'>{page.title}</Typography>
                             </ListItemButton>
                             )}
+                        </Box>
+                        <Box position={'absolute'} bottom={0} right={0} display={{ xs: 'none', md: 'block' }}>
+                            <img src={selfieSticker} />
                         </Box>
                     </Box>
                 </Drawer>
