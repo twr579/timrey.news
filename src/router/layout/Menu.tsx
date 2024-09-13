@@ -1,4 +1,4 @@
-import { Box, IconButton, Link, Typography, Toolbar, Drawer, Divider, ListItemButton, ListItemIcon, Container } from "@mui/material";
+import { Box, IconButton, Link, Typography, Toolbar, Drawer, ListItemButton, ListItemIcon, Container } from "@mui/material";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -6,9 +6,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import FolderIcon from '@mui/icons-material/Folder';
-import ContactPageIcon from '@mui/icons-material/ContactPage';
+import EmailIcon from '@mui/icons-material/Email';
 import selfieSticker from '../../images/selfie-sticker.png';
 import { GitHub, LinkedIn } from "@mui/icons-material";
+import RotatingDiv from "./RotatingDiv";
 
 const pages = [
     {
@@ -28,7 +29,7 @@ const pages = [
     },
     {
         title: 'Contact',
-        icon: <ContactPageIcon color="secondary" />,
+        icon: <EmailIcon color="secondary" />,
         path: '/contact',
     },
     {
@@ -82,9 +83,9 @@ function Menu() {
                             </ListItemButton>
                             )}
                         </Box>
-                        <Box position={'absolute'} bottom={0} right={0} display={{ xs: 'none', md: 'block' }}>
-                            <img src={selfieSticker} />
-                        </Box>
+                        <RotatingDiv>
+                            <img src={selfieSticker} height={'200'} />
+                        </RotatingDiv>
                     </Box>
                 </Drawer>
             </Toolbar>
