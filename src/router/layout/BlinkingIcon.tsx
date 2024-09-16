@@ -1,5 +1,5 @@
-import { keyframes, styled, Typography } from "@mui/material";
-import theme from "../../../theme";
+import { keyframes, styled } from "@mui/material";
+import theme from "../../theme";
 import { ReactNode } from "react";
 
 interface BlinkingIconProps {

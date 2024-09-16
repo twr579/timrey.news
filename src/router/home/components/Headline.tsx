@@ -2,7 +2,7 @@ import { Box, Fade, Grid2, Grow, Slide, Typography, useScrollTrigger } from '@mu
 import { useEffect, useRef, useState } from 'react';
 import useWindowDimensions from '../../../helpers/getWindowDimensions';
 import ArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
-import BlinkingIcon from './BlinkingIcon';
+import BlinkingIcon from '../../layout/BlinkingIcon';
 
 function Headline() {
     const { height } = useWindowDimensions();

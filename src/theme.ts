@@ -49,6 +49,11 @@ let theme = createTheme({
                 underline: 'none',
             },
         },
+        MuiDivider: {
+            defaultProps: {
+                color: '#959A77'
+            }
+        }
     },
 
 });

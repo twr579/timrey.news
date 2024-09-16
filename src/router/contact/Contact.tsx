@@ -13,7 +13,7 @@ function Contact() {
                 startIcon={<SendIcon />}
                 href="mailto:twreynolds98@gmail.com"
                 variant='outlined'
-                sx={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}
+                sx={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}
             >
                 <Typography variant="h2">Shoot me an email</Typography>
             </Button>
