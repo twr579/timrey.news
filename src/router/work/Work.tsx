@@ -4,14 +4,7 @@ import thermometer from "../../images/thermometer.png";
 import BlinkingIcon from "../layout/BlinkingIcon";
 import ArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useState } from "react";
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
-
-enum Labels {
-    Cpp = 'C++',
-    Embedded = 'Embedded',
-    JavaScript = 'JavaScript',
-}
+import Filter, { Labels } from "./components/Filter";
 
 const projects = [
     {
@@ -29,40 +22,12 @@ const projects = [
 
 function Work() {
     const [filterLabels, setFilterLabels] = useState(Object.values(Labels) as Array<keyof typeof Labels>);
-
-    const handleClick = (label: keyof typeof Labels) => {
-        const selected = filterLabels.includes(label);
-
-        let newFilterLabels;
-        if (selected) {
-            newFilterLabels = filterLabels.filter((el) => { return el !== label });
-            setFilterLabels(newFilterLabels);
-        } else {
-            newFilterLabels = [...filterLabels];
-            newFilterLabels.push(label);
-        }
-        setFilterLabels(newFilterLabels);
-    };
-
     const theme = useTheme();
 
     return (
         <>
             <Typography variant='h1'>Work</Typography>
-            <Typography variant='h4'> Filter: {
-                (Object.values(Labels) as Array<keyof typeof Labels>).map(
-                    (label, index) => <Chip
-                        label={label}
-                        sx={{ mr: 1, mb: 1 }}
-                        variant={filterLabels.includes(label) ? "outlined" : "filled"}
-                        icon={filterLabels.includes(label) ? <CheckCircleOutlineIcon /> : <RadioButtonUncheckedIcon />}
-                        onClick={() => handleClick(label)}
-                        key={index}
-                    />
-                )
-
-            }
-            </Typography>
+            <Filter filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
             {projects.map((project, index) =>
                 <Fade in={filterLabels.some(el => project.labels.includes(el as Labels))} key={index}>
                     <Box sx={{ border: `solid 1px ${theme.palette.primary.main}`, p: 2, my: 1 }}>
