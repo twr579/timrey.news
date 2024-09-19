@@ -26,7 +26,7 @@ const interests = [
         ],
     },
     {
-        title: 'Languages - not just programming!',
+        title: 'Languages',
         icon: <ChatBubbleOutlineIcon />,
         bullets: [
             `I took Latin courses throughout high school and college (7.5 years). In high school, I competed and placed in language
