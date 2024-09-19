@@ -1,4 +1,4 @@
-import { Box, Chip, Fade, Grid2, Typography, useTheme } from "@mui/material";
+import { Card, CardContent, Chip, Fade, Grid2, Link, Typography, useTheme } from "@mui/material";
 import Grid from "./components/Grid";
 import thermometer from "../../images/thermometer.png";
 import BlinkingIcon from "../layout/BlinkingIcon";
@@ -8,6 +8,7 @@ import Filter, { Labels } from "./components/Filter";
 
 const projects = [
     {
+        href: 'github.com/twr579/ATmega328P-Thermometer',
         title: 'Thermometer',
         date: '08/24 - 09/24',
         labels: [Labels.Cpp, Labels.Embedded],
@@ -30,22 +31,31 @@ function Work() {
             <Filter filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
             {projects.map((project, index) =>
                 <Fade in={filterLabels.some(el => project.labels.includes(el as Labels))} key={index}>
-                    <Box sx={{ border: `solid 1px ${theme.palette.primary.main}`, p: 2, my: 1 }}>
-                        <Grid2 container alignItems={'center'} justifyContent={'space-between'}>
-                            <Typography variant='h2'>{project.title}</Typography>
-                            <Typography variant='h4'>{project.date}</Typography>
-                        </Grid2>
-                        {project.labels.map((label, index) =>
-                            <Chip label={label} key={index} sx={{ mr: 1 }} />
-                        )}
-                        <Grid><img src={project.image} width={'75%'} /></Grid>
-                        <Typography variant="h5"><BlinkingIcon icon={<ArrowRightIcon />} />
-                            {project.brief}
-                        </Typography>
-                        <Typography variant="h5"><BlinkingIcon icon={<ArrowRightIcon />} />
-                            {project.description}
-                        </Typography>
-                    </Box>
+                    <Link href={`//${project.href}`}>
+                        <Card elevation={3} sx={{
+                            my: 1,
+                            transition: 'transform 0.5s',
+                            '&:hover': { transform: 'scale(0.95)' },
+                        }}>
+                            <CardContent>
+
+                                <Grid2 container alignItems={'center'} justifyContent={'space-between'}>
+                                    <Typography variant='h2'>{project.title}</Typography>
+                                    <Typography variant='h4'>{project.date}</Typography>
+                                </Grid2>
+                                {project.labels.map((label, index) =>
+                                    <Chip label={label} key={index} sx={{ mr: 1, mt: 1 }} />
+                                )}
+                                <Grid><img src={project.image} width={'75%'} /></Grid>
+                                <Typography variant="h5"><BlinkingIcon icon={<ArrowRightIcon />} />
+                                    {project.brief}
+                                </Typography>
+                                <Typography variant="h5"><BlinkingIcon icon={<ArrowRightIcon />} />
+                                    {project.description}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Link>
                 </Fade>
             )}
         </>
