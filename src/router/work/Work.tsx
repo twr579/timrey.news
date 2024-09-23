@@ -1,4 +1,4 @@
-import { Card, CardContent, Chip, Fade, Grid2, Link, Typography, useTheme } from "@mui/material";
+import { Card, CardContent, Chip, Fade, Grid2, Link, Typography } from "@mui/material";
 import Grid from "./components/Grid";
 import thermometer from "../../images/thermometer.png";
 import BlinkingIcon from "../layout/BlinkingIcon";
@@ -23,7 +23,6 @@ const projects = [
 
 function Work() {
     const [filterLabels, setFilterLabels] = useState(Object.values(Labels) as Array<keyof typeof Labels>);
-    const theme = useTheme();
 
     return (
         <>

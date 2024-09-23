@@ -1,6 +1,7 @@
-import { Box, Button, Grid2, Typography } from "@mui/material";
+import { Box, Button, Grid2, Link, Typography } from "@mui/material";
 import StyledCard from "../../layout/StyledCard";
 import DescriptionIcon from '@mui/icons-material/Description';
+import resume from '../../../TimReynoldsResume.pdf';
 
 const skills = [
     {
@@ -37,6 +38,8 @@ function Skills() {
                 <Button
                     startIcon={<DescriptionIcon />}
                     variant='outlined'
+                    LinkComponent={Link}
+                    href={resume}
                     sx={{ position: 'relative', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}
                 >
                     <Typography variant="h2">Check out my resume</Typography>
