@@ -1,25 +1,10 @@
 import { Card, CardContent, Chip, Fade, Grid2, Link, Typography } from "@mui/material";
 import Grid from "./components/Grid";
-import thermometer from "../../images/thermometer.png";
 import BlinkingIcon from "../layout/BlinkingIcon";
 import ArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useState } from "react";
 import Filter, { Labels } from "./components/Filter";
-
-const projects = [
-    {
-        href: 'github.com/twr579/ATmega328P-Thermometer',
-        title: 'Thermometer',
-        date: '08/24 - 09/24',
-        labels: [Labels.Cpp, Labels.Embedded],
-        image: thermometer,
-        brief: 'A portable, lightweight thermometer based on the ATmega328P microcontroller.',
-        description: `I was inspired to work on this project because of my lack of a thermometer to take on hiking/camping trips.
-                    I've previously relied on my phone's weather app and woken up with a frost-covered sleeping bag as a result,
-                    so having a thermometer on hand is a useful tool for testing the efficacy of my sleep system. The code was
-                    written and tested in Arduino IDE. Schematic and PCB were designed in KiCad.`
-    }
-];
+import { projects } from "./components/Projects";
 
 function Work() {
     const [filterLabels, setFilterLabels] = useState(Object.values(Labels) as Array<keyof typeof Labels>);
@@ -35,6 +20,7 @@ function Work() {
                             my: 1,
                             transition: 'transform 0.5s',
                             '&:hover': { transform: 'scale(0.95)' },
+                            display: filterLabels.some(el => project.labels.includes(el as Labels)) ? "block" : "none",
                         }}>
                             <CardContent>
 

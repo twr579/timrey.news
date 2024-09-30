@@ -5,7 +5,15 @@ import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 export enum Labels {
     Cpp = 'C++',
     Embedded = 'Embedded',
+    AWS = 'AWS',
     JavaScript = 'JavaScript',
+    TypeScript = 'TypeScript',
+    WebDevelopment = "Web Development",
+    Docker = 'Docker',
+    GCP = 'GCP',
+    SQL = 'SQL',
+    Python = 'Python',
+    ComputerVision = 'Computer Vision',
 }
 
 interface FilterProps {
