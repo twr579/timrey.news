@@ -22,6 +22,16 @@ interface FilterProps {
 }
 
 function Filter({ filterLabels, setFilterLabels }: FilterProps) {
+    const areAllSelected = filterLabels.length === (Object.values(Labels) as Array<keyof typeof Labels>).length;
+
+    const handleSelectAll = () => {
+        if (areAllSelected) {
+            setFilterLabels([]);
+        } else {
+            setFilterLabels(Object.values(Labels) as Array<keyof typeof Labels>);
+        }
+    }
+
     const handleClick = (label: keyof typeof Labels) => {
         const selected = filterLabels.includes(label);
 
@@ -37,19 +47,27 @@ function Filter({ filterLabels, setFilterLabels }: FilterProps) {
     };
 
     return (
-        <Typography variant='h4'> Filter: {
-            (Object.values(Labels) as Array<keyof typeof Labels>).map(
-                (label, index) => <Chip
-                    label={label}
-                    sx={{ mr: 1, mb: 1 }}
-                    variant={filterLabels.includes(label) ? "outlined" : "filled"}
-                    icon={filterLabels.includes(label) ? <CheckCircleOutlineIcon /> : <RadioButtonUncheckedIcon />}
-                    onClick={() => handleClick(label)}
-                    key={index}
-                />
-            )
+        <Typography variant='h4'> Filter:
+            <Chip
+                label="Select All"
+                sx={{ mx: 1, mb: 1 }}
+                variant={areAllSelected ? "outlined" : "filled"}
+                icon={areAllSelected ? <CheckCircleOutlineIcon /> : <RadioButtonUncheckedIcon />}
+                onClick={() => handleSelectAll()}
+            />
+            {
+                (Object.values(Labels) as Array<keyof typeof Labels>).map(
+                    (label, index) => <Chip
+                        label={label}
+                        sx={{ mr: 1, mb: 1 }}
+                        variant={filterLabels.includes(label) ? "outlined" : "filled"}
+                        icon={filterLabels.includes(label) ? <CheckCircleOutlineIcon /> : <RadioButtonUncheckedIcon />}
+                        onClick={() => handleClick(label)}
+                        key={index}
+                    />
+                )
 
-        }
+            }
         </Typography>);
 }
 
