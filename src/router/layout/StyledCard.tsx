@@ -1,12 +1,13 @@
-import { Card, CardContent, styled, useTheme } from "@mui/material";
+import { Card, CardContent, styled, SxProps, useTheme } from "@mui/material";
 import selfie from '../../images/selfie.png';
 import { ReactNode } from "react";
 
 interface StyledCardProps {
     children: ReactNode;
+    sx?: SxProps;
 }
 
-function StyledCard({ children }: StyledCardProps) {
+function StyledCard({ children, sx }: StyledCardProps) {
     const theme = useTheme();
 
     const backgroundImage = `linear-gradient(0deg,
@@ -36,7 +37,7 @@ function StyledCard({ children }: StyledCardProps) {
             elevation={2}
         >
             <BackgroundImage sx={{ mt: 2 }} />
-            <CardContent sx={{ color: theme.palette.background.default, fontWeight: 'bold', height: 'calc(100% - 40px - 2rem)' }}>
+            <CardContent sx={{ ...sx, color: theme.palette.background.default, fontWeight: 'bold', height: 'calc(100% - 40px - 2rem)' }}>
                 {children}
             </CardContent>
             <BackgroundImage sx={{ mb: 2 }} />

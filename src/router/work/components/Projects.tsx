@@ -9,6 +9,7 @@ import { Labels } from "./Filter";
 
 export const projects = [
     {
+        id: 'thermometer',
         href: 'github.com/twr579/ATmega328P-Thermometer',
         title: 'Thermometer',
         date: '08/24 - 09/24',
@@ -21,6 +22,7 @@ export const projects = [
                     written and tested in Arduino IDE. Schematic and PCB were designed in KiCad.`
     },
     {
+        id: 'monitor',
         href: 'github.com/twr579/AQI-Sensor',
         title: 'Air Quality Monitor',
         date: '12/23 - 02/24',
@@ -35,6 +37,7 @@ export const projects = [
                     DynamoDB table as an MQTT message via AWS IoT Core and a PubSub topic.`
     },
     {
+        id: 'plusonerobotics',
         href: 'www.plusonerobotics.com/',
         title: 'Yonder + InductOne',
         date: '04/23 - 08/23',
@@ -44,6 +47,7 @@ export const projects = [
         description: ``
     },
     {
+        id: 'mitdemzug',
         href: 'github.com/twr579/mit-dem-zug',
         title: 'mit dem Zug',
         date: '01/23',
@@ -53,6 +57,7 @@ export const projects = [
         description: ``
     },
     {
+        id: 'exerciseidentifier',
         href: 'github.com/JordanMagbag/ExerciseIdentifier',
         title: 'Exercise Identifier',
         date: '12/22',
@@ -62,6 +67,7 @@ export const projects = [
         description: ``
     },
     {
+        id: 'feedbackfriend',
         href: 'github.com/Feedback-Friend/Web-Application',
         title: 'Feedback Friend',
         date: '01/22 - 12/22',
@@ -71,6 +77,7 @@ export const projects = [
         description: ``
     },
     {
+        id: 'castlezombie',
         href: 'github.com/twr579/Castle-Zombie',
         title: 'Castle Zombie',
         date: '04/20 - 05/20',

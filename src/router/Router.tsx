@@ -6,15 +6,22 @@ import Topbar from "./layout/Topbar";
 import Work from "./work/Work";
 import Contact from "./contact/Contact";
 
+export enum Paths {
+    Home = '/',
+    About = '/about',
+    Work = '/work',
+    Contact = '/contact',
+}
+
 function Router() {
     return (
         <Routes>
-            <Route path='/' element={<Menu />}>
+            <Route path={Paths.Home} element={<Menu />}>
                 <Route index element={<Home />} />
-                <Route path='/' element={<Topbar />}>
-                    <Route path='about' element={<About />} />
-                    <Route path='work' element={<Work />} />
-                    <Route path='contact' element={<Contact />} />
+                <Route path={Paths.Home} element={<Topbar />}>
+                    <Route path={Paths.About} element={<About />} />
+                    <Route path={Paths.Work} element={<Work />} />
+                    <Route path={Paths.Contact} element={<Contact />} />
                 </Route>
             </Route>
         </Routes>

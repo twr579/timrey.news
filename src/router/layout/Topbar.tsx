@@ -1,6 +1,7 @@
 import { Box, Fade, keyframes, Link, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import { Paths } from "../Router";
 
 function Topbar() {
     const [fade, setFade] = useState(false);
@@ -19,7 +20,7 @@ function Topbar() {
                 display={{ xs: 'none', sm: 'flex' }}
                 justifyContent={'center'}
             >
-                <Link href="/" sx={{
+                <Link href={Paths.Home} sx={{
                     transition: 'transform 0.5s',
                     '&:hover': { transform: 'scale(0.95)' },
                 }}>
