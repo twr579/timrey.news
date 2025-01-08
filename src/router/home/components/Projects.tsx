@@ -2,10 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow } from "swiper/modules";
 import thermometer from "../../../images/thermometer.png"
 import aqiSensor from "../../../images/aqi-sensor.png";
-import plusOneRoboticsLogo from "../../../images/plus-one-robotics-logo.png";
 import mitDemZugLogo from "../../../images/mit-dem-zug-logo.png";
 import exerciseIdentifier from "../../../images/exercise-identifier.png";
-import feedbackFriendLogo from "../../../images/feedback-friend-logo.png";
 import castleZombie from "../../../images/castle-zombie.png";
 
 import "swiper/css";
@@ -25,11 +23,6 @@ const projects = [
         img: aqiSensor,
     },
     {
-        id: 'plusonerobotics',
-        title: 'Yonder + InductOne',
-        img: plusOneRoboticsLogo,
-    },
-    {
         id: 'mitdemzug',
         title: 'mit dem Zug',
         img: mitDemZugLogo,
@@ -38,11 +31,6 @@ const projects = [
         id: 'exerciseidentifier',
         title: 'Exercise Identifier',
         img: exerciseIdentifier,
-    },
-    {
-        id: 'feedbackfriend',
-        title: 'Feedback Friend',
-        img: feedbackFriendLogo,
     },
     {
         id: 'castlezombie',

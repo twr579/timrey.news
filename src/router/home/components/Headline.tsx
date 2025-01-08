@@ -39,7 +39,7 @@ function Headline() {
                 display={{ xs: 'none', sm: 'block' }}
             >
                 <Fade in={trigger}>
-                    <Typography variant='h2' textAlign={'center'}>TIMREY.NEWS</Typography>
+                    <Typography variant='h2' textAlign={'center'}>&#10016; TIMREY.NEWS &#10016;</Typography>
                 </Fade>
             </Box>
             <Box
@@ -52,7 +52,7 @@ function Headline() {
             >
                 <Slide appear={false} direction='down' in={!trigger}>
                     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
-                        <Typography variant='h1'>TIMREY.NEWS</Typography>
+                        <Typography variant='h1'>&#10016; TIMREY.NEWS &#10016;</Typography>
                         <Grow in={grow} timeout={2000}>
                             <Grid2 container spacing={3} direction={'column'} alignItems={'center'}>
                                 <Grid2>

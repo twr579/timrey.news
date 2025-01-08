@@ -24,7 +24,7 @@ function Topbar() {
                     transition: 'transform 0.5s',
                     '&:hover': { transform: 'scale(0.95)' },
                 }}>
-                    <Typography variant='h2'>TIMREY.NEWS</Typography>
+                    <Typography variant='h2'>&#10016; TIMREY.NEWS &#10016;</Typography>
                 </Link>
 
             </Box>

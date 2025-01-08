@@ -1,9 +1,7 @@
 import thermometer from "../../../images/thermometer.png"
 import aqiSensor from "../../../images/aqi-sensor.png";
-import plusOneRobotics from "../../../images/plus-one-robotics.png";
 import mitDemZug from "../../../images/mit-dem-zug.png";
 import exerciseIdentifier from "../../../images/exercise-identifier.png";
-import feedbackFriend from "../../../images/feedback-friend.png";
 import castleZombie from "../../../images/castle-zombie.png";
 import { Labels } from "./Filter";
 
@@ -37,24 +35,19 @@ export const projects = [
                     DynamoDB table as an MQTT message via AWS IoT Core and a PubSub topic.`
     },
     {
-        id: 'plusonerobotics',
-        href: 'www.plusonerobotics.com/',
-        title: 'Yonder + InductOne',
-        date: '04/23 - 08/23',
-        labels: [Labels.JavaScript, Labels.TypeScript, Labels.WebDevelopment, Labels.SQL, Labels.Docker, Labels.GCP],
-        image: plusOneRobotics,
-        brief: '',
-        description: ``
-    },
-    {
         id: 'mitdemzug',
         href: 'github.com/twr579/mit-dem-zug',
         title: 'mit dem Zug',
         date: '01/23',
         labels: [Labels.JavaScript, Labels.WebDevelopment, Labels.Docker, Labels.GCP],
         image: mitDemZug,
-        brief: '',
-        description: ``
+        brief: 'A web app for finding German train stations within reach of your current location',
+        description: `I created this website as part of the interview process for my internship at Plus One Robotics. I was inspired by
+        my discovery of a German railway API on a list of public APIs that appealed to my common interest in Germany and public transit.
+        The name "mit dem Zug" means "by train" in German. The app is intended to assist spontaneous Germans on the go, as it returns a list
+        of train stations reachable from the user's starting station within a given time limit. This is accomplished by an algorithm that recursively
+        looks through train schedules to determine which arrival times occur within the user's time frame. A sophisticated UI displays the name and picture
+        of each station, as well as the route details including arrival times, departure times, and transfers.`
     },
     {
         id: 'exerciseidentifier',
@@ -63,18 +56,13 @@ export const projects = [
         date: '12/22',
         labels: [Labels.Python, Labels.ComputerVision],
         image: exerciseIdentifier,
-        brief: '',
-        description: ``
-    },
-    {
-        id: 'feedbackfriend',
-        href: 'github.com/Feedback-Friend/Web-Application',
-        title: 'Feedback Friend',
-        date: '01/22 - 12/22',
-        labels: [Labels.JavaScript, Labels.WebDevelopment, Labels.Python, Labels.SQL],
-        image: feedbackFriend,
-        brief: '',
-        description: ``
+        brief: 'A computer vision model for identifying body-weight exercises',
+        description: `For my computer vision course, I worked with a team to develop the backend of a web application for identifying the exercise
+        in an uploaded image. My duties included gathering training and testing data sets, running the data through a pose embedder and classifier (BlazePose),
+        and writing code to output a confusion matrix with cv2 and numpy and send a list of likely poses to the frontend via Flask. Based on the confusion matrix,
+        the application can identify the six exercises tested with an average accuracy of 85%. A unique aspect of the project is the fact that I chose to use a
+        dataset consisting of computer generated exercise images rather than real human examples. The results conclusively prove the efficacy of this practice
+        and the potential of using stand-ins for genuine human models to more easily gather a vast amount of pose data.`
     },
     {
         id: 'castlezombie',
@@ -83,7 +71,13 @@ export const projects = [
         date: '04/20 - 05/20',
         labels: [Labels.Cpp, Labels.Embedded],
         image: castleZombie,
-        brief: '',
-        description: ``
+        brief: 'A first-person shooter video game programmed on a LaunchPad TM4C123 microcontroller',
+        description: `Castle Zombie was developed as the final project for my Intro to Embedded Systems class. It consists
+        of a move phase in which the player gains points by holding down one of the input buttons to move through a hallway and
+        a zombie phase in which the player aims and fires at zombies before they advance and attack. It uses two pushbuttons and a slide
+        potentiometer for player input, an LCD display for graphical output, which includes sprites of varying sizes, and a stereo jack in
+        conjunction with a digital-to-analog converter (DAC) for audio output. The program includes multiple interrupt service routines (ISRs)
+        to update inputs and outputs. Check my GitHub for a detailed technical description of the project that I produced for my Engineering
+        Communications course.`
     },
 ];

@@ -1,4 +1,4 @@
-import { Card, CardContent, Chip, Fade, Grid2, Link, Typography, useTheme } from "@mui/material";
+import { Card, CardContent, Chip, Grid2, Link, Typography, useTheme } from "@mui/material";
 import Grid from "./components/Grid";
 import BlinkingIcon from "../layout/BlinkingIcon";
 import ArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
