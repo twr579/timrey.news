@@ -31,7 +31,7 @@ function StyledCard({ children, sx }: StyledCardProps) {
         <Card
             sx={{
                 backgroundImage: backgroundImage,
-                backgroundSize: '1px 5px',
+                backgroundSize: '1px 3px',
                 height: '100%',
             }}
             elevation={2}

@@ -1,11 +1,11 @@
-import { Button, Link, Typography } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import contact from '../../images/contact.png';
 import RotatingDiv from "../layout/RotatingDiv";
 
 function Contact() {
     return (
-        <>
+        <Box height="calc(100vh - 72px)">
             <Typography variant='h1'>Contact</Typography>
             <Typography variant="h4">Want to get in touch? Me too!</Typography>
             <Button
@@ -20,7 +20,7 @@ function Contact() {
             <RotatingDiv>
                 <img src={contact} height={'200'} />
             </RotatingDiv>
-        </>
+        </Box>
     );
 }
 

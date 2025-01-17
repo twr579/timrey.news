@@ -20,7 +20,7 @@ const interests = [
             Before You Die. This has exposed me to a lot of great records from various genres, but I've always had a preference
             for rock music, especially its heavier flavors (metal, punk, hardcore, etc.). The design of this site was partially
             inspired by two albums I discovered through this project, Black Sabbath's Vol. 4 and Faust's Faust IV (coincidence
-            that they're both their bands' fourth albums).`,
+            that they're both their bands' fourth albums). Oh, and of course Talking Heads' third album Fear of Music.`,
             `I can't say what my current favorite band is, but I have to give a shoutout to my first love, the Beatles.`,
             `In my free time, I'll fiddle around on the guitar and drums, but I'm not very good :/`
         ],
@@ -80,7 +80,7 @@ function Interests() {
     return (
         <>
             <Typography variant="h4" sx={{ my: 2 }}><InterestsIcon /> Other things of interest:</Typography>
-            <Box sx={{ mb: 2 }}>
+            <Box sx={{ pb: 2 }}>
                 {interests.map((interest, index) =>
                     <Accordion expanded={expanded === index} onChange={handleChange(index)} key={index}>
                         <AccordionSummary

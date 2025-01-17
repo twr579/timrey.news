@@ -30,6 +30,10 @@ let theme = createTheme({
         h2: {
             fontFamily: 'Heorot, Times, serif',
         },
+        h4: {
+            textShadow: `-2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(0, 0, 0, 0.5);`,
+        }
     },
     components: {
         MuiCssBaseline: {

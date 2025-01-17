@@ -1,4 +1,4 @@
-import { Card, CardContent, Chip, Grid2, Link, Typography, useTheme } from "@mui/material";
+import { Box, Card, CardContent, Chip, Grid2, Link, Typography, useTheme } from "@mui/material";
 import Grid from "./components/Grid";
 import BlinkingIcon from "../layout/BlinkingIcon";
 import ArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
@@ -23,7 +23,7 @@ function Work() {
     }, [location.hash]);
 
     return (
-        <>
+        <Box height={filterLabels.length == 0 ? 'calc(100vh - 72px)' : '100%'}>
             <Typography variant='h1'>Work</Typography>
             <Filter filterLabels={filterLabels} setFilterLabels={setFilterLabels} />
             {projects.map((project, index) =>
@@ -33,7 +33,7 @@ function Work() {
                     <Card elevation={3} sx={{
                         my: 1,
                         transition: 'transform 0.5s',
-                        '&:hover': { transform: 'scale(0.95)' },
+                        '&:hover': { transform: 'scale(0.99)' },
                         display: filterLabels.some(el => project.labels.includes(el as Labels)) ? "block" : "none",
                     }}>
                         <CardContent>
@@ -56,7 +56,7 @@ function Work() {
                     </Card>
                 </Link>
             )}
-        </>
+        </Box>
     );
 }
 

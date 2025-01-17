@@ -19,6 +19,7 @@ function Topbar() {
                 width={'100%'}
                 display={{ xs: 'none', sm: 'flex' }}
                 justifyContent={'center'}
+                boxShadow={`-2px 2px 4px rgba(0, 0, 0, 0.5);`}
             >
                 <Link href={Paths.Home} sx={{
                     transition: 'transform 0.5s',

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import useWindowDimensions from '../../../helpers/getWindowDimensions';
 import ArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import BlinkingIcon from '../../layout/BlinkingIcon';
+import theme from '../../../theme';
 
 function Headline() {
     const { height } = useWindowDimensions();
@@ -35,6 +36,7 @@ function Headline() {
                 position={'fixed'}
                 left={'50%'}
                 sx={{ transform: 'translate(-50%)', backgroundColor: 'background.default', zIndex: 1 }}
+                boxShadow={`-2px 2px 4px rgba(0, 0, 0, 0.5);`}
                 width={'100%'}
                 display={{ xs: 'none', sm: 'block' }}
             >
@@ -51,7 +53,14 @@ function Headline() {
                 sx={{ transform: 'translate(-50%)' }}
             >
                 <Slide appear={false} direction='down' in={!trigger}>
-                    <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
+                    <Box
+                        display={'flex'}
+                        flexDirection={'column'}
+                        alignItems={'center'}
+                        bgcolor={theme.palette.background.default}
+                        boxShadow={`-2px 2px 4px rgba(0, 0, 0, 0.5),
+                2px -2px 0 rgba(255, 255, 255, 0.2);`}
+                    >
                         <Typography variant='h1'>&#10016; TIMREY.NEWS &#10016;</Typography>
                         <Grow in={grow} timeout={2000}>
                             <Grid2 container spacing={3} direction={'column'} alignItems={'center'}>
